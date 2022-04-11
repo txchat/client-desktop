@@ -1,7 +1,3 @@
-# 重要: 本仓库为闭源阶段的谈信桌面端, 已归档
-
-最新代码已移至仓库: https://github.com/txchat/client-desktop
-
 # Chat33Pro 网页版
 
 ## 这是什么?
