@@ -1,0 +1,31 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+    h1 {
+        @apply text-2xl leading-none;
+    }
+
+    h2 {
+        @apply text-xl leading-none;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-base leading-none;
+    }
+}
+
+@layer components {
+    .caption {
+        @apply text-subtle text-xs leading-none;
+    }
+
+    .drawer {
+        @apply bg-white p-7 absolute inset-y-0 right-0 flex flex-col;
+        box-shadow: 0px 0px 14px 0px rgba(36, 55, 78, 0.1);
+    }
+}

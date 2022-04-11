@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package chat33.comet;
+
+message AuthMsg {
+    string appId = 1;
+    string token = 2;
+    bytes ext = 3; // 其它业务方可能需要的信息
+}

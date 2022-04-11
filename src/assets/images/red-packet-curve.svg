@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="290px" height="450px" viewBox="0 0 290 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组</title>
+    <defs>
+        <path d="M10,0 L280,0 C285.522847,-1.01453063e-15 290,4.4771525 290,10 L290,440 C290,445.522847 285.522847,450 280,450 L10,450 C4.4771525,450 3.25606345e-14,445.522847 0,440 L0,10 C-6.76353751e-16,4.4771525 4.4771525,1.01453063e-15 10,0 Z" id="path-1"></path>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="红包消息" transform="translate(-203.000000, -880.000000)">
+            <g id="编组" transform="translate(203.000000, 880.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="蒙版" fill="#DD5F5F" xlink:href="#path-1"></use>
+                <circle id="椭圆形" stroke="#D35252" stroke-width="3" fill="#DD5F5F" fill-rule="nonzero" mask="url(#mask-2)" cx="145" cy="-8.5" r="351.222222"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

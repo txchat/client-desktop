@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="谈信版、找币版" transform="translate(-195.000000, -2002.000000)">
+            <g id="编组" transform="translate(195.000000, 2002.000000)">
+                <rect id="矩形" fill="#32B2F7" x="0" y="0" width="96" height="96" rx="20"></rect>
+                <g id="Page-1" transform="translate(8.000000, 29.000000)" fill="#FFFFFF">
+                    <polygon id="Fill-1" points="0 12.9103448 16.3310345 12.9103448 16.3310345 8.82758621 0 8.82758621"></polygon>
+                    <polygon id="Fill-2" points="43.1448276 25.1586207 77.6827586 25.1586207 77.6827586 21.0758621 43.1448276 21.0758621"></polygon>
+                    <polygon id="Fill-3" points="17.5448276 12.9103448 38.0689655 12.9103448 38.0689655 8.82758621 17.5448276 8.82758621"></polygon>
+                    <polygon id="Fill-4" points="2.20689655 37.2965517 11.1448276 37.2965517 11.1448276 33.2137931 2.20689655 33.2137931"></polygon>
+                    <polygon id="Fill-5" points="5.62758621 37.2965517 11.2551724 37.2965517 11.2551724 0.662068966 5.62758621 0.662068966"></polygon>
+                    <polygon id="Fill-6" points="29.8159288 37.1862069 21.0758621 1.15599068 27.3901087 0.882758621 36.3034483 37.1862069"></polygon>
+                    <polygon id="Fill-7" points="74.7034483 6.22414736 17.5448276 29.462069 17.5448276 23.5059313 74.430872 0.882758621"></polygon>
+                    <polygon id="Fill-8" points="0 23.5078954 0 28.6896552 16.3310345 22.5058977 16.3310345 17.3241379"></polygon>
+                    <polygon id="Fill-9" points="57.6 37.1862069 57.6 14.7517826 63.2275862 12.4689655 63.2275862 37.1862069"></polygon>
+                    <polygon id="Fill-10" points="43.1448276 37.2965517 48.7724138 37.2965517 48.7724138 21.0758621 43.1448276 21.0758621"></polygon>
+                    <polygon id="Fill-11" points="72.2758621 37.2965517 77.9034483 37.2965517 77.9034483 21.0758621 72.2758621 21.0758621"></polygon>
+                    <polygon id="Fill-12" points="74.3868802 8.60689655 80 0.919779623 70.4 0"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

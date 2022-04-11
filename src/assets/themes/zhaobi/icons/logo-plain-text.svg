@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="101px" height="47px" viewBox="0 0 101 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.196078 0 0 0 0 0.698039 0 0 0 0 0.968627 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.197765262">
+        <g id="Page-1" transform="translate(-1111.000000, -2027.000000)" filter="url(#filter-1)">
+            <g transform="translate(1111.833333, 2027.145833)">
+                <polygon id="Fill-1" fill="#FFFFFF" points="0 16.137931 20.4137931 16.137931 20.4137931 11.0344828 0 11.0344828"></polygon>
+                <polygon id="Fill-2" fill="#FFFFFF" points="53.9310345 31.4482759 97.1034483 31.4482759 97.1034483 26.3448276 53.9310345 26.3448276"></polygon>
+                <polygon id="Fill-3" fill="#FFFFFF" points="21.9310345 16.137931 47.5862069 16.137931 47.5862069 11.0344828 21.9310345 11.0344828"></polygon>
+                <polygon id="Fill-4" fill="#FFFFFF" points="2.75862069 46.6206897 13.9310345 46.6206897 13.9310345 41.5172414 2.75862069 41.5172414"></polygon>
+                <polygon id="Fill-5" fill="#FFFFFF" points="7.03448276 46.6206897 14.0689655 46.6206897 14.0689655 0.827586207 7.03448276 0.827586207"></polygon>
+                <polygon id="Fill-6" fill="#FFFFFF" points="37.269911 46.4827586 26.3448276 1.44498835 34.2376359 1.10344828 45.3793103 46.4827586"></polygon>
+                <polygon id="Fill-7" fill="#FFFFFF" points="93.3793103 7.78018421 21.9310345 36.8275862 21.9310345 29.3824141 93.03859 1.10344828"></polygon>
+                <polygon id="Fill-8" fill="#FFFFFF" points="0 29.3848693 0 35.862069 20.4137931 28.1323721 20.4137931 21.6551724"></polygon>
+                <polygon id="Fill-9" fill="#FFFFFF" points="72 46.4827586 72 18.4397283 79.0344828 15.5862069 79.0344828 46.4827586"></polygon>
+                <polygon id="Fill-10" fill="#FFFFFF" points="53.9310345 46.6206897 60.9655172 46.6206897 60.9655172 26.3448276 53.9310345 26.3448276"></polygon>
+                <polygon id="Fill-11" fill="#FFFFFF" points="90.3448276 46.6206897 97.3793103 46.6206897 97.3793103 26.3448276 90.3448276 26.3448276"></polygon>
+                <polygon id="Fill-12" fill="#FFFFFF" points="92.9836003 10.7586207 100 1.14972453 88 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,366 @@
+// protoc -I=. -I=$GOPATH/src --go_out=plugins=grpc:. *.proto
+syntax = "proto3";
+
+package dtalk.proto;
+option go_package = "proto";
+
+enum EventType {
+    commonMsg    = 0; // 正常消息
+    commonMsgAck = 1; // 正常消息的送达回执
+    Notice       = 2; // 通知, 包含消息撤回/群通知
+    SYSNotice    = 3; // 系统通知
+}
+
+// 消息外壳
+message Proto {
+    EventType eventType = 1;
+    bytes     body      = 2;
+}
+
+enum Channel {
+    ToUser = 0;
+    ToGroup = 1;
+}
+
+// common msg define
+enum MsgType {
+    System          = 0;
+    Text            = 1;
+    Audio           = 2;
+    Image           = 3;
+    Video           = 4;
+    File            = 5;
+    Card            = 6;
+    Alert           = 7;
+    Forward         = 8;
+    RTCCall         = 9;
+    Transfer        = 10;
+    Collect         = 11;
+    RedPacket       = 12;
+    ContactCard     = 13;
+}
+
+message SourceUser {
+    string id   = 1;
+    string name = 2;
+}
+
+message Source {
+    Channel    channelType = 1;
+    SourceUser from        = 2;
+    SourceUser target      = 3;
+}
+
+message Reference {
+    int64 topic   = 1; // 引用的根消息
+    int64 ref     = 2; // 直接引用的消息
+}
+
+message CommonMsg {
+    Channel channelType = 1;
+    int64  logId       = 2;
+    string msgId       = 3;
+    string from        = 4;
+    string target      = 5;
+    MsgType msgType    = 6;
+    bytes  msg         = 7;
+    uint64 datetime    = 8;
+    Source source      = 9;
+    Reference reference = 10;
+}
+
+message CommonMsgAck {
+    int64  logId    = 2;
+    uint64 datetime = 8;
+}
+
+message EncryptMsg {
+    string content = 1;
+}
+
+message TextMsg {
+    string content = 1;
+    repeated string mention = 2;
+}
+
+message AudioMsg {
+    string mediaUrl = 1;
+    int32  time     = 2;
+}
+
+message ImageMsg {
+    string mediaUrl = 1;
+    int32  height   = 2;
+    int32  width    = 3;
+}
+
+message VideoMsg {
+    string mediaUrl = 1;
+    int32  time     = 2;
+    int32  height   = 3;
+    int32  width    = 4;
+}
+
+message FileMsg {
+    string mediaUrl = 1;
+    string name     = 2;
+    string md5      = 3;
+    int64  size     = 4;
+}
+
+message CardMsg {
+    string bank    = 1;
+    string name    = 2;
+    string account = 3;
+}
+
+message AlertMsg {
+    AlertType type = 1;
+    bytes     body = 2;
+}
+
+message ForwardMsg {
+    repeated ForwardItem items = 1;
+}
+
+message ForwardItem {
+    string avatar   = 1;
+    string name     = 2;
+    int32  msgType  = 3;
+    bytes  msg      = 4;
+    uint64 datetime = 5;
+}
+
+message TransferMsg {
+    string txHash = 1;
+    string coinName = 2;
+}
+
+enum RPType {
+    RandomAmount  = 0;
+    IdenticalAmount = 1;
+}
+
+message RedPacketMsg {
+    string txHash = 1;
+    string coinName = 2;
+    string exec = 3;    //执行器名称 user.p.
+    RPType packetType = 4;
+    string privateKey  = 5;  //客户端创建的私钥（选填）
+    string remark = 6;
+    uint64 expire = 7;  //到期时间 单位：ms时间戳
+}
+
+enum CardType {
+    Undefined = 0;
+    Personal = 1;
+}
+
+message ContactCardMsg {
+    CardType type = 1;
+    string id = 2;
+    string name = 3;
+    string avatar = 4;
+}
+
+enum AlertType {
+    UpdateGroupNameAlert        = 0;
+    SignInGroupAlert            = 1;
+    SignOutGroupAlert           = 2;
+    KickOutGroupAlert           = 3;
+    DeleteGroupAlert            = 4;
+    UpdateGroupMutedAlert       = 5;
+    UpdateGroupMemberMutedAlert = 6;
+    UpdateGroupOwnerAlert       = 7;
+    MsgRevoked                  = 8; //撤回消息通知，客户端占用
+}
+
+message AlertUpdateGroupName {
+    int64  group    = 1;
+    string operator = 2;
+    string name     = 3;
+}
+
+message AlertSignInGroup {
+    int64           group   = 1;
+    string          inviter = 2;
+    repeated string members = 3;
+}
+
+message AlertSignOutGroup {
+    int64  group    = 1;
+    string operator = 2;
+}
+
+message AlertKickOutGroup {
+    int64           group    = 1;
+    string          operator = 2;
+    repeated string members  = 3;
+}
+
+message AlertDeleteGroup {
+    int64  group    = 1;
+    string operator = 2;
+}
+
+message AlertUpdateGroupMuted {
+    int64          group    = 1;
+    string         operator = 2;
+    proto.MuteType type     = 3;
+}
+
+message AlertUpdateGroupMemberMutedTime {
+    int64           group    = 1;
+    string          operator = 2;
+    repeated string members  = 3;
+}
+
+message AlertUpdateGroupOwner {
+    int64  group    = 1;
+    string newOwner = 2;
+}
+
+//alert msg define
+message NotifyMsg {
+    ActionType action = 1;
+    bytes      body   = 2;
+}
+
+enum ActionType {
+    Received        = 0;
+    Revoke          = 1;
+    SignInGroup     = 10;
+    SignOutGroup    = 11;
+    DeleteGroup     = 12;
+    //
+    UpdateGroupJoinType         = 20;
+    UpdateGroupFriendType       = 21;
+    UpdateGroupMuteType         = 22;
+    UpdateGroupMemberType       = 23;
+    UpdateGroupMemberMuteTime   = 24;
+    UpdateGroupName             = 25;
+    UpdateGroupAvatar           = 26;
+    //
+    StartCall   = 31;
+    AcceptCall  = 32;
+    StopCall    = 33;
+}
+
+message ActionReceived {
+    repeated int64 logs = 1;
+}
+
+message ActionSignInGroup {
+    repeated string uid     = 1;
+    int64           group   = 2;
+    uint64          time    = 3;
+}
+
+message ActionSignOutGroup {
+    repeated string uid     = 1;
+    int64           group   = 2;
+    uint64          time    = 3;
+}
+
+message ActionDeleteGroup {
+    int64   group   = 1;
+    uint64  time    = 2;
+}
+
+enum JoinType {
+    JoinAllow   = 0;
+    JoinDeny    = 1;
+    JoinApply   = 2;
+}
+
+message ActionUpdateGroupJoinType {
+    int64    group = 1;
+    JoinType type  = 2;
+    uint64   time  = 3;
+}
+
+enum FriendType {
+    FriendAllow = 0;
+    FriendDeny  = 1;
+}
+
+message ActionUpdateGroupFriendType {
+    int64      group = 1;
+    FriendType type  = 2;
+    uint64     time  = 3;
+}
+
+enum MuteType {
+    MuteAllow = 0;
+    MuteDeny  = 1;
+}
+
+message ActionUpdateGroupMuteType {
+    int64    group = 1;
+    MuteType type  = 2;
+    uint64   time  = 3;
+}
+
+enum MemberType {
+    Normal = 0;
+    Admin  = 1;
+    Owner  = 2;
+}
+
+message ActionUpdateGroupMemberType {
+    int64      group = 1;
+    string     uid   = 2;
+    MemberType type  = 3;
+    uint64     time  = 4;
+}
+
+message ActionUpdateGroupMemberMuteTime {
+    int64           group    = 1;
+    repeated string uid      = 2;
+    int64           muteTime = 3;
+    uint64          time     = 4;
+}
+
+message ActionUpdateGroupName {
+    int64  group = 1;
+    string name  = 2;
+    uint64 time  = 3;
+}
+
+message ActionUpdateGroupAvatar {
+    int64  group  = 1;
+    string avatar = 2;
+    uint64 time   = 3;
+}
+
+message ActionStartCall {
+    int64 trace_id = 1;
+}
+
+message ActionAcceptCall {
+    int64  trace_id        = 1;
+    int32  room_id         = 2;
+    string uid             = 3;
+    string user_sig        = 4;
+    string private_map_key = 5;
+    int32  skd_app_id      = 6;
+}
+
+enum StopCallType {
+    Busy    = 0;
+    Timeout = 1;
+    Reject  = 2;
+    Hangup  = 3;
+    Cancel  = 4;
+}
+
+message ActionStopCall {
+    int64        trace_id = 1;
+    StopCallType reason   = 2;
+}
+
+message ActionRevoke {
+    int64  logId = 1;
+    string operator = 2;
+    bool self = 3;
+}

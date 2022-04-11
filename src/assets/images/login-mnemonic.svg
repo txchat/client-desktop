@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="660px" height="120px" viewBox="0 0 660 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>背景-助记词</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="660" height="120" rx="12"></rect>
+        <linearGradient x1="50%" y1="52.954286%" x2="108.669955%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#333649" offset="0%"></stop>
+            <stop stop-color="#424660" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="聊天" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="背景" transform="translate(-630.000000, -550.000000)">
+            <g id="背景-助记词" transform="translate(630.000000, 550.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="蒙版" fill="#333649" xlink:href="#path-1"></use>
+                <path d="M311.5,248.518092 C436.040211,248.518092 537,147.558303 537,23.0180919 C537,-101.522119 436.040211,-202.481908 311.5,-202.481908 C186.959789,-202.481908 86,-241.758184 86,23.0180919 C86,287.794368 186.959789,248.518092 311.5,248.518092 Z" id="椭圆形" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

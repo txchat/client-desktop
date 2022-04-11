@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="660px" height="70px" viewBox="0 0 660 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>背景-手机邮箱</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="660" height="70" rx="12"></rect>
+        <linearGradient x1="65.5492287%" y1="37.2710191%" x2="50.4181524%" y2="62.0443613%" id="linearGradient-3">
+            <stop stop-color="#1FAEFB" offset="0%"></stop>
+            <stop stop-color="#66C2F4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="聊天" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="背景" transform="translate(-630.000000, -690.000000)">
+            <g id="背景-手机邮箱" transform="translate(630.000000, 690.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="蒙版" fill="#32B2F7" xlink:href="#path-1"></use>
+                <path d="M201,157.518092 C384.910822,157.518092 534,82.9735027 534,-8.98190812 C534,-100.937319 384.910822,-175.481908 201,-175.481908 C17.0891783,-175.481908 -132,-204.481908 -132,-8.98190812 C-132,186.518092 17.0891783,157.518092 201,157.518092 Z" id="椭圆形" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

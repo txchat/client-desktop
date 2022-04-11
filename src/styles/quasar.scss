@@ -1,0 +1,28 @@
+@import '~quasar/dist/quasar.css';
+
+.q-menu {
+    box-shadow: 0px 0px 14px 0px rgba(36, 55, 78, 0.1);
+    min-width: 110px;
+    @apply text-center rounded-md;
+}
+
+.q-item {
+    min-height: 34px;
+}
+
+.q-dialog {
+    .q-dialog__backdrop {
+        background-color: transparent;
+    }
+}
+
+.q-dialog.q-dialog__backdrop_dark {
+    .q-dialog__backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.q-dialog .q-card {
+    box-shadow: 0px 0px 14px 0px rgba(36, 55, 78, 0.1) !important;
+    border-radius: 10px !important;
+}

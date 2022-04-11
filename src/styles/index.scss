@@ -1,0 +1,17 @@
+@import './quasar.scss';
+@import './tailwind.scss';
+@import './transitions.scss';
+@import './custom-input.scss';
+@import './iconfont.scss';
+
+html,
+body,
+#app {
+    font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB',
+        'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
+    @apply m-0 p-0 w-full h-full text-dark box-border;
+}
+
+html {
+    font-size: 15px;
+}

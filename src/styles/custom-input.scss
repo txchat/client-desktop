@@ -1,0 +1,12 @@
+// 全局自定义的 input 样式
+
+// `验证码` 输入框的 placeholder 居中
+input.placeholder-center::placeholder {
+    text-align: center;
+}
+
+// 所有输入框的 placeholder 自定义样式
+::-webkit-input-placeholder,
+::placeholder {
+    @apply font-normal text-sm text-dark #{!important};
+}
