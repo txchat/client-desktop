@@ -93,11 +93,6 @@ server {
           try_files $uri $uri/ /group-code/index.html;
     }
 
-    ## 二维码跳转页 v2
-    location /group-code-v2/ {
-          try_files $uri $uri/ /group-code-v2/index.html;
-    }
-
     ## okr模块 pc
     location /okrpc {
           try_files $uri $uri/ /okrpc/index.html;
