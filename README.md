@@ -8,6 +8,4 @@
 
 ## 查看开发文档
 
-```sh
-npm run docs:dev
-```
+https://txchat.github.io/client-desktop/
