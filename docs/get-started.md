@@ -12,11 +12,11 @@ npm install
 
 之所以使用 npm 而不是 yarn 或 pnpm, 是因为项目依赖的 [electron-builder](https://www.electron.build/) 对后者的支持存在某些问题, 启动项目会报错.
 
-## 镜像加速
+### 镜像加速
 
-安装 Electron 包时, 会下载二进制文件, 而默认路线很慢. 可以配置镜像以提升下载速度.
+安装 Electron 依赖时, 会下载相关二进制文件, 而默认下载路线很慢. 可以配置镜像以提升下载速度.
 
--   方式一
+- 方式一
 
 在安装命令前面加 `ELECTRON_MIRROR` 环境变量, 以加快 Electron 二进制文件下载速度
 
@@ -24,7 +24,7 @@ npm install
 ELECTRON_MIRROR="https://cdn.npm.taobao.org/dist/electron/" npm install
 ```
 
--   方式二 (推荐)
+- 方式二 (推荐)
 
 [参考这篇文章](https://antfu.me/posts/npm-binary-mirrors)
 
