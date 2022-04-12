@@ -15,15 +15,17 @@
     "deploy:police": "npm run build:police && bash deployPolice.sh",
     "serve:zhaobi": "cross-env THEME=zhaobi vue-cli-service serve --open",
     "build:zhaobi": "cross-env THEME=zhaobi vue-cli-service build",
-    "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps",
-    "build-electron-icon": "electron-icon-builder --input=./build/icons/icon.png --output=build --flatten",
     "lint": "vue-cli-service lint",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "electron:serve": "cross-env VUE_APP_ELECTRON_ENV=true vue-cli-service electron:serve",
     "electron:build-beta4mac": "cross-env VUE_APP_ELECTRON_ENV=true VUE_APP_BASE_URL=https://test-chat33pro.xzd.me vue-cli-service electron:build -m",
     "electron:build-beta4win": "cross-env VUE_APP_ELECTRON_ENV=true VUE_APP_BASE_URL=https://test-chat33pro.xzd.me vue-cli-service electron:build -w",
     "electron:build-beta4all": "cross-env VUE_APP_ELECTRON_ENV=true VUE_APP_BASE_URL=https://test-chat33pro.xzd.me vue-cli-service electron:build -wm",
-    "electron:build-release": "cross-env VUE_APP_ELECTRON_ENV=true VUE_APP_BASE_URL=https://3syxin.com vue-cli-service electron:build -wm"
+    "electron:build-release": "cross-env VUE_APP_ELECTRON_ENV=true VUE_APP_BASE_URL=https://3syxin.com vue-cli-service electron:build -wm",
+    "build-electron-icon": "electron-icon-builder --input=./build/icons/icon.png --output=build --flatten",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
   "main": "background.js",
   "dependencies": {
@@ -41,6 +43,7 @@
     "eccrypto": "^1.1.6",
     "electron-log": "^4.4.6",
     "enc-utils": "^3.0.0",
+    "esbuild": "^0.14.36",
     "express": "^4.17.2",
     "http-proxy-middleware": "^2.0.3",
     "js-crypto-aes": "^1.0.2",
@@ -108,7 +111,8 @@
     "typescript": "~4.4.0",
     "url-loader": "^4.1.1",
     "vue-cli-plugin-electron-builder": "~2.1.1",
-    "vue-cli-plugin-tailwind": "~2.0.6"
+    "vue-cli-plugin-tailwind": "~2.0.6",
+    "vuepress": "^2.0.0-beta.39"
   },
   "browserslist": [
     "> 1%",

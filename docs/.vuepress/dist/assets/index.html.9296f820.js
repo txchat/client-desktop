@@ -1,0 +1,1 @@
+const t={key:"v-8daa1a0e",path:"/",title:"",lang:"zh-CH",frontmatter:{home:!0,heroImage:"/images/logo.svg",tagline:"\u542F\u52A8\u9879\u76EE\u524D\u6700\u597D\u9605\u8BFB\u4E00\u4E0B",actions:[{text:"\u5F00\u59CB",link:"get-started.md",type:"primary"}]},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"README.md"};export{t as data};
